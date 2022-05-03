@@ -74,7 +74,7 @@ fontLoader.load('/fonts/helvetiker_regular.typeface.json', (font) => {
     //     - textGeometry.boundingBox.max.z * 0.5)
     textGeometry.center()
 
-    text = new THREE.Mesh(textGeometry, material2)
+    text = new THREE.Mesh(textGeometry, material1)
     // text.material.wireframe = true
     scene.add(text)
 })
