@@ -4,7 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'lil-gui'
 import {FontLoader} from "three/examples/jsm/loaders/FontLoader.js";
 import {TextGeometry} from "three/examples/jsm/geometries/TextGeometry.js";
-import {MeshBasicMaterial, MeshMatcapMaterial, MeshNormalMaterial} from "three";
+import { MeshMatcapMaterial } from "three";
 
 /**
  * Base
@@ -74,7 +74,7 @@ fontLoader.load('/fonts/helvetiker_regular.typeface.json', (font) => {
     //     - textGeometry.boundingBox.max.z * 0.5)
     textGeometry.center()
 
-    text = new THREE.Mesh(textGeometry, material1)
+    text = new THREE.Mesh(textGeometry, material2)
     // text.material.wireframe = true
     scene.add(text)
 })
@@ -156,11 +156,11 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 /**
  * Animate
  */
-const clock = new THREE.Clock()
+// const clock = new THREE.Clock()
 
 const tick = () =>
 {
-    const elapsedTime = clock.getElapsedTime()
+    // const elapsedTime = clock.getElapsedTime()
 
     // update donut
     for (let i = 0; i < NUMBER_OF_DONUT; i++) {
